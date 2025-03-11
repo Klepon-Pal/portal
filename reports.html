@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Creation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="report-container">
+        <h1>Report Creation</h1>
+        
+        <div id="alertBox" class="alert-box" style="display: none;"></div>
+
+        <form id="reportForm">
+            <label for="agent">Officer Name:</label>
+            <input type="text" id="agent" name="agent" readonly required>
+
+            <label>Report Number:</label>
+            <p id="reportID">R001</p>
+
+            <label for="incidentType">Incident Type:</label>
+            <select id="incidentType" name="incidentType" required>
+                <option value="" disabled selected>Select the incident type</option>
+                <option value="Shots Fired">Shots Fired</option>
+                <option value="Assault">Assault</option>
+                <option value="Theft">Theft</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="incidentDate">Incident Date:</label>
+            <input type="date" id="incidentDate" name="incidentDate" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Detail the incident..." required></textarea>
+
+            <label for="peopleCount">Number of People Involved:</label>
+            <select id="peopleCount" required>
+                <option value="" disabled selected>Select the number of people</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <div id="peopleContainer"></div>
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <button onclick="window.location.href='user.html'" class="back-button">Back to Dashboard</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

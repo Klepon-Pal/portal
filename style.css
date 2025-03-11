@@ -1,0 +1,165 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #001b44; /* Bleu foncé pour le fond */
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    padding: 25%;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #001b44; /* Bleu foncé pour le fond principal */
+    border: 5px solid #b38e00; /* Bordure dorée */
+    border-radius: 8px;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* Style des sections et encarts */
+.section {
+    background-color: #002a6e; /* Bleu intermédiaire */
+    padding: 15px;
+    border: 2px solid #b38e00; /* Bordure dorée */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Conteneur de Bienvenue */
+.welcome-container {
+    background-color: #ffffff; /* Fond blanc */
+    color: #001b44; /* Texte bleu foncé pour le contraste */
+    padding: 20px;
+    border: 2px solid #b38e00; /* Bordure dorée */
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-container h2 {
+    color: #001b44; /* Titre en bleu foncé pour contraste */
+    margin-bottom: 10px;
+}
+
+.welcome-container .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #b38e00; /* Bordure dorée */
+    margin-top: 10px;
+}
+
+/* Formulaires */
+label {
+    font-weight: bold;
+    color: #b38e00; /* Texte doré pour les labels */
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid #b38e00; /* Bordure dorée pour champ */
+    background-color: #ffffff;
+    color: #001b44;
+    font-size: 1em;
+}
+
+/* Boutons */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #b38e00; /* Doré */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a500; /* Doré plus clair au survol */
+}
+
+/* Boutons spécifiques */
+button.police-call {
+    background-color: #001f54; /* Bleu foncé spécifique */
+}
+
+button.fire-ems-call {
+    background-color: #bf1f2f; /* Rouge pompier */
+}
+
+button.clear-call {
+    background-color: #4d4d4d; /* Gris pour effacer */
+}
+
+button.police-call:hover {
+    background-color: #004080;
+}
+
+button.fire-ems-call:hover {
+    background-color: #ff3333;
+}
+
+button.clear-call:hover {
+    background-color: #666666;
+}
+
+/* Encarts de récapitulatif et de texte */
+.summary-box, .response-box {
+    background-color: #002a6e;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ffffff;
+    border: 2px solid #b38e00;
+}
+
+.summary-box h3, .response-box h3 {
+    color: #b38e00;
+    font-size: 1.3em;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Checkbox et radio */
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Style pour l'entête */
+.header {
+    background-color: #001b44; /* Bleu foncé */
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header img {
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}

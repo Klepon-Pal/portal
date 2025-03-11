@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+            // Example of ongoing alerts
+            const alerts = [
+                { id: 1, description: "Robbery in progress downtown" },
+                { id: 2, description: "Assault reported in the North district" },
+                { id: 3, description: "Vehicle theft in the East sector" },
+                { id: 4, description: "Vehicle theft in the West sector" }
+            ]; 
+
+        </script>
+
+        <script>
+            // Display alerts when the page loads
+            displayAlerts();
+
+            // Function to display alerts
+            function displayAlerts() {
+                const alertContainer = document.getElementById('alertContainer');
+
+                 alerts.forEach(alert => {
+                     const alertDiv = document.createElement('div');
+                     alertDiv.className = 'alert';
+                     alertDiv.innerHTML = `
+                         <p>${alert.description}</p>
+                         <button onclick="takeAlert(${alert.id})">Take Alert</button>
+                     `;
+                     alertContainer.appendChild(alertDiv);
+                 });
+            }
+
+            // Function to take an alert
+            function takeAlert(id) {
+                const alert = alerts.find(a => a.id === id);
+                if (alert) {
+                    alert(`You have taken charge of the alert: ${alert.description}`);
+                    // Here, you could save this action for tracking
+                }
+            }
+        </script>
+
+        <title>Ongoing Alerts</title>
+        <!-- Move the styling to a CSS file, thanks! -->
+        <style> 
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+            .container {
+                text-align: center;
+                background: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 500px;
+            }
+            h1 {
+                color: #333;
+            }
+            .alert {
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 5px;
+                background-color: #ffeb3b;
+                color: #333;
+            }
+            button {
+                margin-top: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Ongoing Alerts</h1>
+            <div id="alertContainer">
+                <button onClick="displayAlerts()">Show Alerts</button>
+                
+                <!-- Alerts will be displayed here -->
+                 <!-- And why aren't they here? -->
+            </div>
+        </div>
+    </body>
+</html>
